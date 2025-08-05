@@ -1,5 +1,5 @@
 # Build app
-FROM node:20-alpine3.20 As build
+FROM node:24.5-alpine As build
 WORKDIR /usr/src/app
 COPY package*.json package-lock.json ./
 RUN npm ci
