@@ -7,7 +7,7 @@ on:
     - develop
 
 env:
-  IMAGE_NAME: ${{ secrets.DOCKER_REGISTRY }}/darty/react-fe
+  IMAGE_NAME: ${{ secrets.DOCKER_REGISTRY }}/darty-fe
   HELM_REPO: https://x-access-token:${{ secrets.HELM_REPO_PAT }}@github.com/nahoczki/darty-fe-helm.git
   HELM_REPO_DIR: darty-fe-helm
   CHART_PATH: ./darty-fe-helm
@@ -36,7 +36,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ env.IMAGE_NAME }}:${{ github.sha }}
+        tags: ${{ env.IMAGE_NAME }}:${{ github.sha.substring(0, 7) }}
 
     - name: Set environment variables based on branch
       id: set_env
