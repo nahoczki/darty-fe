@@ -1,6 +1,7 @@
 import "./App.css";
 import Home from "./views/home";
 import { BrowserRouter, Route, Routes } from "react-router";
+import Invite from "./views/invite";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/invite" element={<Invite />} />
           <Route
             path="*" // 404 page
             element={

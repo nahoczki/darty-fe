@@ -1,1 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&family=Roboto&family=Ubuntu&display=swap");
+
+@font-face {
+  font-family: "Spooky-Font"; /* Choose a descriptive name */
+  src: url("./fonts/Scary Halloween Font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
